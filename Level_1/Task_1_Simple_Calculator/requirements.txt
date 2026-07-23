@@ -1,0 +1,14 @@
+# Simple Calculator - Dependencies
+#
+# This project uses only the Python Standard Library:
+#   - tkinter (GUI toolkit)
+#   - math    (square root calculation)
+#
+# No third-party packages are required.
+#
+# NOTE for Linux users: tkinter does not ship with pip and must be
+# installed via your system package manager if it isn't already present:
+#
+#   Ubuntu/Debian: sudo apt-get install python3-tk
+#   Fedora:        sudo dnf install python3-tkinter
+#   macOS/Windows: tkinter is bundled with the official Python installer

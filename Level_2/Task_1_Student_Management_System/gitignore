@@ -1,0 +1,57 @@
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==============================
+# Virtual Environments
+# ==============================
+venv/
+env/
+ENV/
+.venv/
+
+# ==============================
+# IDE / Editor
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ==============================
+# OS-specific
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Application-specific
+# ==============================
+# Uncomment the line below if you do NOT want to track the database
+# file in version control (recommended for a fresh clone each time):
+# student.db
+
+# Log files (if logging is added in the future)
+*.log

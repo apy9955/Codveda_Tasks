@@ -1,0 +1,8 @@
+# Codveda | Number Guessing Game
+#
+# This project uses only the Python standard library:
+#   - tkinter (GUI)
+#   - random  (number generation)
+#
+# No external/third-party packages are required.
+# This file is included for completeness and future extensibility.

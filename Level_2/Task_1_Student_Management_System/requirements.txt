@@ -1,0 +1,16 @@
+# Codveda | Student Management System
+# ------------------------------------
+# This project relies only on Python's standard library:
+#   - tkinter   (GUI toolkit — bundled with standard Python installers)
+#   - sqlite3   (embedded database — bundled with standard Python)
+#
+# No third-party packages are required.
+#
+# Minimum Python version: 3.8+
+#
+# Note for Linux users:
+# If tkinter is not pre-installed on your system, install it via your
+# package manager, e.g.:
+#   Ubuntu/Debian:  sudo apt-get install python3-tk
+#   Fedora:         sudo dnf install python3-tkinter
+#   macOS/Windows:  tkinter ships with the official Python installer.

@@ -1,0 +1,235 @@
+/* ==========================================================================
+   Codveda Auth System — custom theme
+   Dark, violet-accented UI layered on top of Bootstrap 5.
+   ========================================================================== */
+
+:root {
+  --bg: #0f0b1a;
+  --surface: #161125;
+  --surface-2: #1e1832;
+  --surface-border: #2c2447;
+  --primary: #8b5cf6;
+  --primary-2: #a78bfa;
+  --primary-dark: #6d28d9;
+  --text: #ece7f8;
+  --text-dim: #a79cc7;
+  --success: #34d399;
+  --danger: #f87171;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(139, 92, 246, 0.18), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(167, 139, 250, 0.12), transparent 45%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, .brand-font {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--primary-2); }
+a:hover { color: var(--primary); }
+
+/* ---- Navbar -------------------------------------------------------- */
+.navbar-codveda {
+  background: rgba(22, 17, 37, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.navbar-codveda .navbar-brand {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.navbar-codveda .navbar-brand .brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  margin-right: 8px;
+  font-weight: 800;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.navbar-codveda .nav-link {
+  color: var(--text-dim) !important;
+}
+.navbar-codveda .nav-link:hover,
+.navbar-codveda .nav-link.active {
+  color: var(--text) !important;
+}
+
+/* ---- Auth split-screen layout --------------------------------------- */
+.auth-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.auth-side {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(167, 139, 250, 0.35), transparent 55%),
+    linear-gradient(160deg, var(--primary-dark) 0%, #2a1660 55%, #150c2c 100%);
+  color: white;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-side::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 26px 26px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.auth-side .feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.88);
+}
+
+.auth-side .feature-list .dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: #d8caff;
+  box-shadow: 0 0 10px 2px rgba(216, 202, 255, 0.7);
+}
+
+.auth-form-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  padding: 2.25rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* ---- Forms ----------------------------------------------------------- */
+.form-control, .form-select {
+  background-color: var(--surface-2);
+  border: 1px solid var(--surface-border);
+  color: var(--text);
+  padding: 0.65rem 0.9rem;
+  border-radius: 9px;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: var(--surface-2);
+  border-color: var(--primary);
+  color: var(--text);
+  box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.25);
+}
+
+.form-control::placeholder { color: #6f6590; }
+
+.form-label {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.form-text, .text-muted { color: var(--text-dim) !important; }
+
+.invalid-feedback { display: block; }
+
+/* ---- Buttons ----------------------------------------------------------- */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border: none;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  border-radius: 9px;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-2), var(--primary));
+  transform: translateY(-1px);
+}
+.btn-outline-light { border-color: var(--surface-border); }
+
+/* ---- Cards / dashboard ------------------------------------------------- */
+.card-codveda {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.stat-card .stat-value {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-2);
+}
+
+.badge-role-admin {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+}
+.badge-role-user {
+  background: var(--surface-2);
+  color: var(--text-dim);
+  border: 1px solid var(--surface-border);
+}
+
+.table {
+  color: var(--text);
+}
+.table > :not(caption) > * > * {
+  background-color: transparent;
+  border-bottom-color: var(--surface-border);
+  color: var(--text);
+}
+
+footer.site-footer {
+  color: var(--text-dim);
+  border-top: 1px solid var(--surface-border);
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+@media (max-width: 991.98px) {
+  .auth-side { padding: 2.5rem 2rem; }
+}

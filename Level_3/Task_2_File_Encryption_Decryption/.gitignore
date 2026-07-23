@@ -1,0 +1,33 @@
+# Encryption key - NEVER commit this
+key.key
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Encrypted / decrypted sample outputs
+*.encrypted
+decrypted_*
+
+# Logs
+*.log
